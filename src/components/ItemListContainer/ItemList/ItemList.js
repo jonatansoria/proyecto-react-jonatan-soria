@@ -11,7 +11,7 @@ const ProductList = () => {
     useEffect (() => {
         
 
-    axios('https://fakestoreapi.com/products?limit=6').then((res) =>
+    axios('https://fakestoreapi.com/products?limit=3').then((res) =>
     setProduct(res.data)
     );
     setTimeout(() => {

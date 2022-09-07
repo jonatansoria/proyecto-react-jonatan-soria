@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 
 
 
@@ -11,7 +12,7 @@ const App = () => {
      <div>   
       <NavBar /> 
     <div className='App-container'>   
-       <ItemListContainer />
+      <ItemDetailContainer />
       </div>
    </div>
 
