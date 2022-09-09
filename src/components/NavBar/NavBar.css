@@ -2,17 +2,23 @@
 .NavBar{
     width: 100%;
     background: linear-gradient(90deg, rgba(174,72,208,1) 0%, rgba(181,82,241,0.9500175070028011) 55%, rgba(54,153,194,1) 100%);
+    align-items: center;
 }
 img {
     width:50px ;
     border-radius: 30px;
 }
 
-ul li {
+.NavLink {
     list-style-type: none;
     text-decoration: none;
     color: white;
     font-weight: bold;
     display: inline;
+    margin-left: 100px;
+}
+.Cart-logo {
+    width: 30px;
+    color: white;
     margin-left: 100px;
 }

@@ -1,36 +1,13 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CardProd from '../../CardProducts/CardProd';
-import './ItemList.css'
 
 
-const ProductList = () => {
-    const [product, setProduct] = useState ([]);
-    const [Loading,setLoading] =useState ()
 
-    useEffect (() => {
-        
-
-    axios('https://fakestoreapi.com/products?limit=3').then((res) =>
-    setProduct(res.data)
-    );
-    setTimeout(() => {
-       setLoading(true) 
-    }, 2000);
-
-    },[] );
+const ProductList = ({data =[]}) => {
   
     return (
-        <div className='Card'>
-            {product.map((prod) => {
-                return (
-               <div key={prod.id}>
-                 {Loading ? <CardProd response={prod} /> :null}
-               </div>
-               );    
-            })}
-       </div>
+        data.map(Products => <CardProd key={Products.id} response ={Products} />)
     );
-};
+}
 
 export default ProductList;
