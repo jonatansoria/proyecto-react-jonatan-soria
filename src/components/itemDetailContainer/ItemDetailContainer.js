@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail/ItemDetail';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+
 
 const Products = [
   {id: 1 ,image:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", category:'menClothes', price:120,title: "Foldsack" },
@@ -25,13 +26,20 @@ const Products = [
               resolve(Products) 
           }, 2000);
       });
-      getData.then(res => setData(res.find(Product => Product.id === parseInt(detalleId)))); 
+      
+      getData.then(res => {
+        console.log(res.find(Product => Product.id === parseInt(detalleId)));
+        setData(res.find(Product => Product.id === parseInt(detalleId)))}); 
 
   },[])
 
   return (
-      <div className='Card'>
-        <ItemDetail data= {data} />
+      <div>
+              <div key={data.id}>
+              <Link to={ `/detail/${data.id}`} className='detail'>
+                <ItemDetail data= {data} />
+              </Link>
+            </div>        
      </div>
   );
 };

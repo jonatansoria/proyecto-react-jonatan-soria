@@ -1,4 +1,7 @@
 
 .Card{
       text-decoration: none;
+      align-content: space-between;
+      border-radius: 20px;
+      border-color: black;
 }

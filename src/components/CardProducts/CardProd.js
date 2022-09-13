@@ -4,9 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import {Link} from "react-router-dom"
+
 const CardProd = ({response}) => {
   return (
     <Card sx={{ maxWidth: 350 }}>
+      <Link to={`/detail/${response.id}`}>
       <CardActionArea>
         <CardMedia
         component='img'
@@ -30,6 +33,7 @@ const CardProd = ({response}) => {
          More Info
         </Button>
       </CardActions>
+      </Link>
     </Card>
   );
 }

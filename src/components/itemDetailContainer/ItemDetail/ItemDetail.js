@@ -1,12 +1,12 @@
 import React from 'react'
-import Item from '../Item/Item'
+import CardProd from '../../CardProducts/CardProd';
 
-function itemDetail({data =[]} ) {
+
+function itemDetail({data={}}) {
   return (
    
-       data.map(Products => <Item key={Products.id} info ={Products} />)
+      <CardProd key={data.id} response ={data} />)
      
-  )
 }
 
 export default itemDetail;

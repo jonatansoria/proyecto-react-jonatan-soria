@@ -1,17 +1,17 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+/*import React from 'react'
+
 
 
 const Item = ({ info }) => {
 
   return (
-        <Link to={`/detalle/${info.id}`} className="detail">
+        <div className="detail">
         <img src={info.image} alt="imagen" />
         <h2>{info.title}</h2> 
         <p>precio:{info.price}</p>
-        </Link>       
+        </div>       
     );
 }
 
 
-export default Item;
+export default Item;*/
