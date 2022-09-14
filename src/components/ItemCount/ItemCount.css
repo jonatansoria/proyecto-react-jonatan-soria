@@ -1,0 +1,22 @@
+.counter {
+    margin-top:80px ;
+    text-align: center;
+    color: white ;
+    background-color: rgb(67, 135, 190);
+    border-radius: 40px;
+    width: 240px;
+    height: 280px;
+}
+.text {
+    margin: 20px;
+}
+
+.amount {
+    margin: 25px;
+    width: auto;
+}
+
+button {
+    margin-bottom: 10px;
+    font-weight: bold;
+}

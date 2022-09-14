@@ -8,7 +8,7 @@ import {Link} from "react-router-dom"
 
 const CardProd = ({response}) => {
   return (
-    <Card sx={{ maxWidth: 350 }}>
+    <Card sx={{ maxWidth: 225 }}>
       <Link to={`/detail/${response.id}`}>
       <CardActionArea>
         <CardMedia

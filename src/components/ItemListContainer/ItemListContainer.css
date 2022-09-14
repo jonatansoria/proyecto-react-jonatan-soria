@@ -1,7 +1,6 @@
 
-.Card{
-      text-decoration: none;
+.flex-container{
+      display: flex;
       align-content: space-between;
-      border-radius: 20px;
-      border-color: black;
+     
 }

@@ -39,7 +39,7 @@ const ItemListContainer = () => {
     },[categoriaId]);
   
     return (
-        <div className='Card'>
+        <div className='flex-container'>
           <ProductList data= {data} />
        </div>
     );
