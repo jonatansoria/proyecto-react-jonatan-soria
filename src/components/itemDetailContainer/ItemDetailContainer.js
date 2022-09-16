@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail/ItemDetail';
-import {useParams } from 'react-router-dom';
+import {Link,useParams } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetailContainer.css";
 
@@ -15,13 +15,17 @@ const Products = [
 ];
 
 
- export const ItemDetailContainer = () => {
+  const ItemDetailContainer = () => {
   const [data, setData] = useState ({});
+  const [counter,setCounter] = useState(true)
+
+ const count = () => {
+   
+   setCounter (!counter) 
+  
+ }
 
   const {detalleId} = useParams ();
-
-
-   
 
   useEffect (() => {
 
@@ -34,17 +38,22 @@ const Products = [
       getData.then(res => {
         setData(res.find(Product => Product.id === parseInt(detalleId)))}); 
 
-  },[])
+  },[detalleId])
 
   return (
       <div className='flex-container'>
               <div key={data.id}>              
                 <ItemDetail data= {data} />
               </div>  
-              <ItemCount />       
+              {counter
+               ?<ItemCount/> 
+               :<Link to="/cart"> <button className='btn btn-warning mx-3'> Ver Carrito</button> </Link>
+              }     
      </div>
   );
 };
 
 
 export default ItemDetailContainer;
+
+
