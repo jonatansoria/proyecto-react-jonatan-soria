@@ -3,6 +3,7 @@ import ItemDetail from './ItemDetail/ItemDetail';
 import {Link,useParams } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetailContainer.css";
+import { useCartContext } from '../../CartContext';
 
 
 const Products = [
@@ -17,12 +18,14 @@ const Products = [
 
   const ItemDetailContainer = () => {
   const [data, setData] = useState ({});
-  const [counter,setCounter] = useState(true)
+  const [seeCart,setSeeCart] = useState (false);
+  const {addProduct} = useCartContext ();
+ 
 
- const count = () => {
-   
-   setCounter (!counter) 
-  
+ const onAdd = (quantity) => {
+     setSeeCart(true) ;
+     addProduct(data,quantity);
+
  }
 
   const {detalleId} = useParams ();
@@ -45,11 +48,13 @@ const Products = [
               <div key={data.id}>              
                 <ItemDetail data= {data} />
               </div>  
-              {counter
-               ?<ItemCount/> 
-               :<Link to="/cart"> <button className='btn btn-warning mx-3'> Ver Carrito</button> </Link>
-              }     
-     </div>
+              {
+                seeCart
+                ? <Link to= "/cart"><button className='btn btn-warning mx-3'>Terminar Compra</button> </Link>
+                :<ItemCount initial ={1} stock= {6} onAdd={onAdd} />
+              }
+                  
+         </div>
   );
 };
 
