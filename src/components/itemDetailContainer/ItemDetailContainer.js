@@ -50,7 +50,8 @@ const Products = [
               </div>  
               {
                 seeCart
-                ? <Link to= "/cart"><button className='btn btn-warning mx-3'>Terminar Compra</button> </Link>
+                ? <Link to= "/cart"><button className='btn btn-warning mx-3'>Terminar Compra</button><Link to= "/"><button className='btn btn-warning mx-3'>Seguir Comprando</button></Link></Link> 
+               
                 :<ItemCount initial ={1} stock= {6} onAdd={onAdd} />
               }
                   

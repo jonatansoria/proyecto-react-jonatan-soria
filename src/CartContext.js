@@ -19,6 +19,11 @@ const addProduct = (item,quantity) => {
     }
 }
 
+const totalPrice = () => {
+  return cart.reduce((prev, act) => prev + act.quantity * act.price,0);
+}
+const totalProducts = () =>cart.reduce((acumulador ,prodcutoActual) => acumulador + prodcutoActual.quantity,0);
+
 const clearCart = () => setCart([]);
 
 const isInCart = (id) => cart.find(product => product.id === id)? true : false;
@@ -30,7 +35,10 @@ const deleteProduct = (id) => setCart(cart.filter(product =>product.id !== id));
           addProduct,
           clearCart,
           isInCart,
-          deleteProduct
+          deleteProduct,
+          totalPrice,
+          totalProducts,
+          cart
         }}>
           {children}
         </CartContext.Provider>    
