@@ -20,7 +20,7 @@ const addProduct = (item,quantity) => {
 }
 
 const totalPrice = () => {
-  return cart.reduce((prev, act) => prev + act.quantity * act.price,0);
+  return cart.reduce((prev, act) => prev + act.quantity * act.Price,0);
 }
 const totalProducts = () =>cart.reduce((acumulador ,prodcutoActual) => acumulador + prodcutoActual.quantity,0);
 

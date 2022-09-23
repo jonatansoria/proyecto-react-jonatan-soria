@@ -1,13 +1,8 @@
 
 .Card {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 25% 25% 25% 25%;
     gap: 40px;
-    
+    margin-top: 50px;
   }
-  
-  .Card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+

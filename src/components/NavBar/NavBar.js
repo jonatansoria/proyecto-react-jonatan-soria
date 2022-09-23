@@ -11,8 +11,9 @@ const NavBar = () => {
             <img src={FreakyCat} alt="logo" />
             <NavLink to ="/" className="NavLink">Home</NavLink>
             <NavLink to = "/" className="NavLink">Contactos</NavLink>
-            <NavLink to ="/category/menClothes" className="NavLink">Men Clothes</NavLink>
-            <NavLink to ="/category/jewelery" className="NavLink">jewelery</NavLink>
+            <NavLink to ="/category/Tazas" className="NavLink">Tazas</NavLink>
+            <NavLink to ="/category/Laminas" className="NavLink">Laminas</NavLink>
+            <NavLink to ="/category/Remeras" className="NavLink">Remeras</NavLink>
             <NavLink className='Cart-logo' to="Cart"><CartWidget /></NavLink>
         </ul>
     </nav>

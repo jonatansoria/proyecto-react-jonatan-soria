@@ -18,21 +18,19 @@ const CardProd = ({response}) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-           {response.title}
+           {response.Title}
           </Typography>
           <Typography color="primary">
-            Price : {response.price}
+            Precio : ${response.Price}
+          </Typography>
+          <Typography variant="body" color="text.secondary">
+           Descripcion: {response.Description}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-           Category: {response.category}
-          </Typography>
+           Categoria: {response.Category}
+           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-         More Info
-        </Button>
-      </CardActions>
       </Link>
     </Card>
   );
