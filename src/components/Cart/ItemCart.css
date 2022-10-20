@@ -1,8 +1,28 @@
 
-.cart-container{
-    display: flex;
-    border: 1px solid black;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 20px auto;
+.custon {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.custon th {
+    padding: 3px;
+    text-align: left;
+    background-color: #d584f2;
+    color: white;
+    text-align: center;
+}
+.info {
+    border: 1px solid #ddd;
+    padding: 3px;
+    width: 200px;
+    text-align: center;
+}
+.delete {
+    margin-left: 50px;
+    border-radius: 5px;
+    align-items: center;
+}
+.deleteAll {
+    width: 100px;
 }

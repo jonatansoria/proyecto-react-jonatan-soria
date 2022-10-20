@@ -7,20 +7,23 @@ function ItemCart({product}) {
 
   return (
 
-    <div className='cart-container'>
-        <div>
-            <img src={product.image} alt ={product.title}/>
-        </div>
-        <div>
-            <p>Item : {product.Title}</p>
-            <p>Cantidad :{product.quantity} </p>
-            <p>Precio : {product.Price}</p>
-            <p>Subtotal : $ {product.quantity * product.Price}</p>
-            <button onClick={()=> deleteProduct(product.id)}>Eliminar Producto</button>
-        </div>
-
-    </div>
-
+    <table className="custon">
+      <tr>
+        <th>Item</th>
+        <th>cantidad</th>
+        <th>precio</th>
+        <th>SubTotal</th>
+        <th className="deleteAll">Eliminar</th>
+      </tr>
+     
+      <tr>
+        <td className="info">{product.Title} </td> 
+        <td className="info">{product.quantity} </td>
+        <td className="info">$ {product.Price} </td>  
+        <td className="info"> $ {product.quantity * product.Price} </td>
+        <td ><button className="delete" onClick={()=> deleteProduct(product.id)}>Borrar</button> </td>     
+      </tr>    
+</table>
     )
 }
 

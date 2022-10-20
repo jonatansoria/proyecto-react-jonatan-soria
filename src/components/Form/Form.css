@@ -1,0 +1,38 @@
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title {
+    margin: 50px;
+    color: rgba(54,153,194,1);
+}
+h5 {
+    
+    color: white;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding:25px ;
+    border-radius: 10px;
+    background-color: rgba(54,153,194,1) ;
+}
+label {
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input {
+   margin:10px;
+   border-radius: 5px;
+}

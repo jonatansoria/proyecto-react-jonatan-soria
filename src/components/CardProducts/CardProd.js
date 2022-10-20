@@ -10,7 +10,7 @@ const CardProd = ({response}) => {
         <div className='card-container'>
 
             <img src={response.image} alt='producto' className='image'/>
-            <h5 className='title'>{response.Title}</h5>  
+            <h6 className='card-title'>{response.Title}</h6>  
             <p className='text1'>Descripcion : {response.Description}</p>  
             <p className='text2'>Precio : ${response.Price}</p> 
             <p className='text3'>Categoria: {response.Category}</p>

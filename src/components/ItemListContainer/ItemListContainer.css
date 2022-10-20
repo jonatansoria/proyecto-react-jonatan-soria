@@ -2,6 +2,6 @@
 .flex-container{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;  
-       align-content: space-between;
-     
+      align-content: space-between;
+     text-decoration-style: none;
 }

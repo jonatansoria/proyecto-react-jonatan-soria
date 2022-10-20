@@ -2,5 +2,6 @@
 .flex-container {
             display: flex;
             justify-content: space-evenly;
+            text-decoration-style: none;
 }
 

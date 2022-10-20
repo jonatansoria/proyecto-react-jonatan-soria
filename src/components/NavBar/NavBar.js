@@ -3,6 +3,8 @@ import './NavBar.css'
 import { NavLink } from 'react-router-dom';
 import FreakyCat from '../Assets/img/FreakyCat.jpg';
 import CartWidget from '../Cart/CartWidget';
+import MenuCategory from '../Category/Category';
+
 
 const NavBar = () => {
   return (
@@ -10,11 +12,9 @@ const NavBar = () => {
           <ul>
             <img src={FreakyCat} alt="logo" />
             <NavLink to ="/" className="NavLink">Home</NavLink>
-            <NavLink to = "/" className="NavLink">Contactos</NavLink>
-            <NavLink to ="/category/Tazas" className="NavLink">Tazas</NavLink>
-            <NavLink to ="/category/Laminas" className="NavLink">Laminas</NavLink>
-            <NavLink to ="/category/Remeras" className="NavLink">Remeras</NavLink>
+            <MenuCategory className="NavLink"/>
             <NavLink className='Cart-logo' to="Cart"><CartWidget /></NavLink>
+            <NavLink to = "/Form" className="NavLink">Check in</NavLink>
         </ul>
     </nav>
   )

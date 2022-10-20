@@ -21,9 +21,9 @@ function ItemCount ({initial, stock, onAdd}) {
      return(
        <div className="counter">
           <div className='text'>
-            <div className='name'>
-             <h3 className='amount'>Cantidad: {amount}</h3>
+            <div className='name'>             
              <button className='btn btn-success mx-3' disabled ={amount <= 1} onClick={decrease}>-</button> 
+             <span className='amount'> {amount}</span>
              <button className='btn btn-danger mx-3' disabled ={amount >= stock} onClick={increase}>+</button>
              <button className='btn btn-warning mx-3' disabled ={stock <=0} onClick={() => onAdd(amount)}> Agregar al Carrito</button>             
              </div>
